@@ -1,0 +1,44 @@
+!-------------------------------------------------------------------------------
+!
+!	U R X V T - M L - Setting
+!
+! For normal urxvt, change URxvt-ml* to URxvt*
+URxvt*geometry:         	80x35
+URxvt*inheritPixmap:    	true
+URxvt*reverseVideo:		false
+URxvt*shading:	        20		!trans, 0=opaque    
+URxvt*fading:	        10		!term unfocus      
+#URxvt*font:	     		-lfp-gamow-medium-r-normal-*-*-90-*-*-c-*-iso8859-5
+!urxvt*font:			-*-terminus-medium-*-*-*-17-*-*-*-*-*-koi8-*
+!urxvt*font			xft:Monospace:pixelsize=21
+!urxvt*font:  		xft:matto:antialias=true:size=8
+!urxvt*font:			xft:Bitstream Vera Sans mono:size=9
+URxvt.font:xft:wenquanyi zen hei:medium:pixelsize=13:antialias=True
+URxvt.boldfont:xft:wenquanyi zen hei:bold:pixelsize=13:antialias=True
+urxvt*scrollBar:		true
+urxvt*scrollBar_floating:	true
+urxvt*scrollBar_right:	false
+urxvt*scrollColor:		#000000
+urxvt*saveLines:		5500
+!urxvt*termName:		urxvt
+
+!URxvt.geometry:80x36+80+80
+URxvt.background:      black
+URxvt.foreground:      white
+URxvt.colorBD:         yellow
+URxvt.colorUL:         green
+URxvt.scrollBar:      True
+URxvt.scrollBar_right:      True
+URxvt.scrollstyle:      next
+!set the artificial transparency of the v.t.
+URxvt.inheritPixmap:      false
+URxvt.shading:         500
+URxvt.saveLines:      1500
+URxvt.color4:         RoyalBlue4
+URxvt.color12:         SkyBlue2
+URxvt.tintColor:      Grey25
+URxvt.preeditType:      Root
+URxvt.borderLess:      False
+
+URxvt.inputMethod:scim
+

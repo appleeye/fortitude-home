@@ -1,0 +1,19 @@
+*** 技术兴趣
+
+----
+
+ - Emacs/Emacs Lisp
+
+----
+
+ - MPLS VPN/BGP Routing
+
+----
+
+ - Gentoo Linux/Linux
+ 
+  1) [[./linux_tips.html][My Linux Tips&Tricks]]
+
+  2) [[http://blog.csai.cn/user1/265/archives/2005/2465.html][理解gcc、libc与binutils的关系]]
+ 
+  3) [[http://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html][GCC ABI策略与指引]]

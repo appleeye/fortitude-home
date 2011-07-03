@@ -1,0 +1,4 @@
+*** JRE运行环境
+**** 中文字体
+ 
+ 在 *jre-path/lib/fonts/* 中建立一个 *fallback* 目录，拷贝中文字体如wqy-microhei过去，即可解决jre中文显示问题。

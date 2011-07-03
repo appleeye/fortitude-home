@@ -1,0 +1,42 @@
+# PURPOSE: exclue files that currently not wanted to be tracked
+
+# exclude files for clean layout
+.*
+
+
+!.emacs
+!.Xresources
+!.Xdefaults
+!.gitignore
+!.emacs.d
+!.emrc
+!wallpapers
+!muse/
+
+Android/
+tmp/
+org/
+AndroidDev/
+Downloads/
+Mail/
+News/
+Projects/
+Soft/
+Source/
+Texinfo/
+bin/
+个人/
+读书/
+下载/
+学习/
+音乐/
+5700/
+Desktop/
+Java/
+Mindmaps/
+Source Insight/
+HtmlDev/
+WorkTech/
+game/
+soundfont/
+workspace/

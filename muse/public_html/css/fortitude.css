@@ -1,0 +1,227 @@
+html {
+    background-color: #F7EBB6;
+}
+
+
+body {
+    font-size: 108%;
+    font-weight: normal;
+}
+
+h1 {
+    
+    font-weight: bold;
+    margin: 0 0 1em 0;
+    padding: .25em .5em;
+    background-color: #ccc;
+    
+}
+
+h2, h3, h4 {
+    font-weight: bold;
+}
+
+h2 { 
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 123.1%;
+    background-color: #A6AEB6;
+}
+
+h3 { 
+    border-bottom: 1px black dotted;
+    padding-bottom: 3px;
+    font-size: 108%;
+    margin: 15px 0;
+}
+
+em {
+    font-style: italic;
+}
+
+li {
+    list-style: disc;
+    margin-left: 30px;
+}
+
+pre {
+    overflow: auto;
+}
+
+strong {
+    font-weight: bolder;
+}
+
+#nav li {
+    list-style: none;
+    margin-left: 0;
+}
+
+#title { 
+    font-size: 167%;
+    color: #FFFFFF;
+    background-color: transparent;
+    display: inline;
+    position: relative;
+    left: 30px;
+    top: 100px;
+}
+
+#subtitle {
+    font-size: 77%;
+    display: inline;
+    position: relative;
+    top: 102px;
+    left: 40px;
+    background-color: transparent;
+    font-weight: normal;
+    padding: 0;
+}
+
+#hd {
+    /* color: #CFC7C7; */
+    /* background-color: #083C71; */
+    /* height: 150px; */
+    margin: 0;
+    padding: 0;
+}
+
+
+#cornerImage { 
+    width: 130px;
+    height: 128px;
+    float: right;
+    margin-top: -30px;
+    margin-right: 20px;
+}
+
+#bd {
+    padding-top: 10px;
+}
+
+#bd p {
+    padding: 0.5em 0;
+}
+
+.menucenter {
+    text-align:center;
+}
+
+#ft { 
+    text-align: center;
+    border-top: thin solid #A6AEB6;
+    margin-top: 30px;
+}
+
+#ft p { 
+    font-style: italic;
+    font-size: smaller;
+    padding: 2em 0;
+}
+
+#fortune { 
+    color: #993300;
+    font-size: 0.8em;
+    padding-bottom: 10%;
+}
+
+.fortuneBy {
+    padding-left: 20%;
+    font-style: italic;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.fortuneText {
+    padding: 0;
+    margin: 0;
+}
+
+.flourish { 
+    text-align: center;
+}
+
+.muse-table {
+    margin: 10px 0;
+}
+
+td {
+    padding: 8px;
+}
+
+/* Tasks section */
+.task .A { color: red }
+.task .B { color: green }
+.task .C { color: navy }
+.task .done      { color: gray; text-decoration: line-through; }
+.task .cancelled { color: gray; text-decoration: italic; }
+
+#tasks ul { 
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* LiveJournal section */
+
+.dateTime { 
+    text-align: right;
+    font-size: smaller;
+}
+
+
+ul#blognav li {
+    list-style: none;
+    margin-left: 0;
+}
+
+.entry { 
+    font-family: serif;
+}
+
+
+.currents { 
+    font-size: smaller;
+}
+
+div.commentLinks {
+    clear: both;
+    padding-top: 1em;
+}
+
+h3.entry-title { 
+    text-transform: lowercase;
+    margin-bottom: 2px;
+    font-variant: small-caps;
+    letter-spacing: -0.05em;
+}
+
+h3.entry-title a {
+    text-decoration: none;
+    color: black;
+}
+
+h3.entry-title a:visited {
+    color: black;
+}
+
+.entry-divider { 
+    text-align: center;
+    padding: 5%;
+}
+
+blockquote { 
+    color: #993300;
+    font-size: 90%;
+    padding-left: 2%;
+    border-left: 3px red solid;
+}
+
+#skips { 
+    text-align: center;
+    padding: 3%;
+}
+
+.src {
+    background-color: #083C71;
+}

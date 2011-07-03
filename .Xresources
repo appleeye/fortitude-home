@@ -1,0 +1,9 @@
+Emacs.FontBackend: xft
+Emacs.font: 文泉驿微米黑-12
+
+
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
