@@ -2,7 +2,7 @@
 
 # exclude files for clean layout
 .*
-
+*~
 
 !.emacs
 !.Xresources
