@@ -4,6 +4,8 @@
 
  - Emacs/Emacs Lisp
 
+  1) [[https://github.com/foritudezhang/fortitude-home][我的Emacs配置@github]]
+
 ----
 
  - MPLS VPN/BGP Routing

@@ -90,8 +90,8 @@
  '(ecb-add-path-for-not-matching-files (quote (nil)))
  '(ecb-layout-window-sizes (quote (("my-left-right" (0.14912280701754385 . 0.4772727272727273) (0.14912280701754385 . 0.5) (0.14912280701754385 . 0.4772727272727273) (0.14912280701754385 . 0.25) (0.14912280701754385 . 0.25)))))
  '(ecb-options-version "2.40")
- '(ecb-source-path (quote ((#("/home/fortitude/org" 0 19 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu")) #("/home/fortitude/org" 0 19 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu"))) ("/mnt/work/006-reddit/reddit-git" "reddit-code"))))
- '(org-agenda-files (quote ("~/org/201106M.org")))
+ '(ecb-source-path (quote ((#("/home/fortitude/org" 0 19 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu")) #("/home/fortitude/org" 0 19 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu"))) ("/mnt/work/006-reddit/reddit-git" "reddit-code") ("/mnt/work/007-pylons/mypylonssite/zhamiao" "zhamiao"))))
+ '(org-agenda-files (quote ("~/org/201107M.org")))
  '(weblogger-config-alist (quote (("default" "http://blog.4nian.com/xmlrpc.php" "admin" "" "1")))))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
