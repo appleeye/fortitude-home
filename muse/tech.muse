@@ -6,6 +6,11 @@
 
   1) [[https://github.com/foritudezhang/fortitude-home][我的Emacs配置@github]]
 
+
+ - Python
+
+  1) [[http://norvig.com/python-lisp.html][Python for Lisp Programmers]]
+
 ----
 
  - MPLS VPN/BGP Routing

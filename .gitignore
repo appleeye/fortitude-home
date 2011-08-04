@@ -12,7 +12,9 @@
 !.emrc
 !wallpapers
 !muse/
+!Texinfo
 
+sat
 Android/
 tmp/
 org/
@@ -23,7 +25,6 @@ News/
 Projects/
 Soft/
 Source/
-Texinfo/
 bin/
 个人/
 读书/
