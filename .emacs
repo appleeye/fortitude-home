@@ -80,6 +80,9 @@
 ;load muse
 (load "~/.emrc/emacs-rc-muse.el")
 
+;load net
+(load "~/.emrc/emacs-rc-net.el")
+
 ;////////////////////////////////LOAD RC END///////////////////////////////////////////
 
 (custom-set-variables
