@@ -1,8 +1,6 @@
 ;net related functions and commands will be put here
 
-;ange-ftp wrapper
-(require 'ange-ftp)
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;USER SPEFICIED VARIABLE HERE;;;;;;;;;;;;;;;;;;;;;;;;
 (defvar *ftp-process* nil)
 (setq 4nian.com (netrc-machine (netrc-parse "~/.netrc") "www.4nian.com" t))
 (defvar *ftp-user* (netrc-get 4nian.com "login"))
@@ -12,6 +10,14 @@
 ;better to use float number,cause we using float-time func which return float value
 (defconst *ftp-max-timeout* 100.0)
 (defvar *ftp-last-action-time* 0)
+
+;remote path and local path
+(defconst *ftp-HOME* "~/muse/public_html/")
+(defconst *ftp-WEB* "/domains/4nian.com/public_html/zdy/")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ACTUALL WRAPPER,CORE FUNCTIONS;;;;;;;;;;;;;;;;;;;;;
+;ange-ftp wrapper
+(require 'ange-ftp)
 
 (defun ftp-has-timed-out-p ()
   (> (- (float-time (current-time)) *ftp-last-action-time*)
@@ -33,7 +39,7 @@
   (when (not (ftp-connected-p *ftp-process*))
     (setq *ftp-process* 
 	  (ange-ftp-get-process host user))
-;;    (ange-ftp-set-binary-mode host user))
+    (ange-ftp-set-binary-mode host user))
   (ftp-set-last-action-time)
   ;return process
   *ftp-process*)
@@ -61,10 +67,6 @@
 (defun ftp-mkdir (dir)
   (ftp-raw-send-cmd-wrapper (format "mkdir %s" dir)))
 
-;the actually usefull function to upload files to the ftp server
-(defconst *ftp-HOME* "~/muse/public_html/")
-(defconst *ftp-WEB* "/domains/4nian.com/public_html/zdy/")
-
 (defun ftp-upload-file (from)
   (setq file-name (file-name-nondirectory from))
   (setq to (concat *ftp-WEB* file-name))
@@ -73,12 +75,6 @@
 (defun ftp-upload-buf-file (from buffname)
   (setq to (concat *ftp-WEB* buffname))
   (ftp-copy-file from to))
-
-(defun ftp-upload-current-file ()
-  (interactive)
-  (ftp-upload-buf-file (expand-file-name (buffer-file-name)) (buffer-name)))
-
-;put your expansion here,i use this function to upload the html file in current dir to the remote ftp server:)
 
 ;i copy this function from gnu emacs lisp manual,'cause directory files cannot process regex correctly,as least
 ;on my machine,so i use this function to substitute it
@@ -121,7 +117,12 @@
          ;; return the filenames
          files-list))
 
-(defun ftp-upload-zdy-html ()
+;;;;;;;;;;;;;;;;;;;;;;;;PUT CUSTUM PERSONAL FUNCTION HERE;;;;;;;;;;;;;;;;;;;;;;;;
+(defun ftp-upload-current-file ()
+  (interactive)
+  (ftp-upload-buf-file (expand-file-name (buffer-file-name)) (buffer-name)))
+
+(defun ftp-upload-my-html ()
   (interactive)
   (setq html-list (files-in-below-directory *ftp-HOME* "\.html$"))
   (if html-list
