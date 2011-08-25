@@ -1,0 +1,36 @@
+
+----
+
+*** 快捷键
+
+ - C-u C-x = 
+
+   此快捷键用来查看当前point所在字符的编码信息（如utf-8/gbk），关于UTF-8编码相关介绍，请参考[1]。
+
+ - C-s / C-r
+
+   此快捷键分别对应于正向搜索和反向搜索，结合使用可以快速在buffer中查找固定文字，比如适用于在Mew中查找包含特定标题的邮件。
+
+----
+
+*** 交互函数
+
+ - describe-character-set
+
+   此函数用来查看指定的字符集信息，可查看Emacs支持的如unicode-bmp、unicode等字符集信息。
+
+ - list-colors-display
+
+   此函数直观显示十六进制的色彩码表，非常适用于编写CSS快速查找色彩定义。
+
+----
+
+*** 其他
+
+  网络上有朋友整理了Emacs常用的命令列表，可以参考这个链接[2]。
+
+Footnotes: 
+
+[1]  [[http://www.pythonclub.org/python-basic/encode-detail][Unicode编码，UCS、UTF、BMP、BOM等名词介绍]]
+
+[2]  [[http://www.cse.unl.edu/~choueiry/S08-476-876/Documents/emacs_ref.html][Emacs Commands List]]
