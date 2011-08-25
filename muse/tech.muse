@@ -4,6 +4,8 @@
 
  - Emacs/Emacs Lisp
 
+  0) [[./emacs_tips.html][My Emacs Tips&Tips]]
+
   1) [[https://github.com/foritudezhang/fortitude-home][我的Emacs配置@github]]
 
   2) [[https://github.com/foritudezhang/fortitude-home/blob/master/.emrc/emacs-rc-net.el][Emacs ange-ftp wrapper]]
@@ -20,8 +22,8 @@
 
  - Gentoo Linux/Linux
  
-  1) [[./linux_tips.html][My Linux Tips&Tricks]]
+  0) [[./linux_tips.html][My Linux Tips&Tricks]]
 
-  2) [[http://blog.csai.cn/user1/265/archives/2005/2465.html][理解gcc、libc与binutils的关系]]
+  1) [[http://blog.csai.cn/user1/265/archives/2005/2465.html][理解gcc、libc与binutils的关系]]
  
-  3) [[http://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html][GCC ABI策略与指引]]
+  2) [[http://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html][GCC ABI策略与指引]]

@@ -40,5 +40,5 @@ URxvt.tintColor:      Grey25
 URxvt.preeditType:      Root
 URxvt.borderLess:      False
 
-URxvt.inputMethod:scim
+URxvt.inputMethod:fcitx
 

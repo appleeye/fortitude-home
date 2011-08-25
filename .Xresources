@@ -1,6 +1,7 @@
 Emacs.FontBackend: xft
 Emacs.font: 文泉驿微米黑-12
 
+URxvt.perl-ext-common:  default,tabbed
 
 Xft.antialias: true
 Xft.hinting: true

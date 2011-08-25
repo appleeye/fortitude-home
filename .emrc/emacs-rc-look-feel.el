@@ -12,12 +12,12 @@
 (color-theme-calm-forest)
 
 ;UTF-8 settings
-;(setq current-language-environment "UTF-8")
-;(setq locale-coding-system 'utf-8)
+(setq current-language-environment "UTF-8")
+(setq locale-coding-system 'utf-8)
 (add-to-list 'default-frame-alist '(font . "文泉驿等宽微米黑:12"))
 ;enable xft font-backend,must be set in the Xresource file in order to 
 ;make effect in the first frame
-;(add-to-list 'default-frame-alist '(font-backend . "xft"))
+(add-to-list 'default-frame-alist '(font-backend . "xft"))
 
 ;startup maximize
 (defun toggle-fullscreen ()

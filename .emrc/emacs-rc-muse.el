@@ -3,6 +3,7 @@
 (require 'muse-mode)
 (require 'muse-html)
 (require 'muse-project)
+(require 'muse-colors)
 
 ;create my project related materials
 (muse-derive-style "my-page-html" "html"
