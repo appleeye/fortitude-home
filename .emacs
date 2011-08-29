@@ -83,6 +83,9 @@
 ;load net
 (load "~/.emrc/emacs-rc-net.el")
 
+;load tex
+(load "~/.emrc/emacs-rc-tex.el")
+
 ;////////////////////////////////LOAD RC END///////////////////////////////////////////
 
 (custom-set-variables

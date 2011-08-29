@@ -4,7 +4,7 @@
 
  - Emacs/Emacs Lisp
 
-  0) [[./emacs_tips.html][My Emacs Tips&Tips]]
+  0) [[./emacs_tips.html][Emacs经验分享及汇总]]
 
   1) [[https://github.com/foritudezhang/fortitude-home][我的Emacs配置@github]]
 
@@ -22,7 +22,7 @@
 
  - Gentoo Linux/Linux
  
-  0) [[./linux_tips.html][My Linux Tips&Tricks]]
+  0) [[./linux_tips.html][Linux经验分享及汇总]]
 
   1) [[http://blog.csai.cn/user1/265/archives/2005/2465.html][理解gcc、libc与binutils的关系]]
  
