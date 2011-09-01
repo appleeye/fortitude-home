@@ -1,3 +1,8 @@
+----
+
+*** 扩展包
+
+   - [[http://www.enigmacurry.com/2008/05/09/emacs-as-a-powerful-python-ide/][将Emacs打造为强大的的PythoIDE]]
 
 ----
 
