@@ -28,6 +28,10 @@
 
    此函数直观显示十六进制的色彩码表，非常适用于编写CSS快速查找色彩定义。
 
+ - byte-recompile-directory
+
+   通过C-u 0 M-x byte-compile-directory可无提示的byte-compile目录下的所有el文件。
+
 ----
 
 *** 其他

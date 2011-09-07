@@ -29,10 +29,10 @@
 (global-set-key "%" 'match-paren)
           
 ;yasnippet settings
-(add-to-list 'load-path "~/.emacs.d/yasnippet-0.6.1c")
+(add-to-list 'load-path "/home/fortitude/.emacs.d/yasnippet-0.6.1c")
 (require 'yasnippet)
 (yas/initialize)
-(yas/load-directory "~/.emacs.d/yasnippet-0.6.1c/snippets")
+(yas/load-directory "/home/fortitude/.emacs.d/yasnippet-0.6.1c/snippets")
 
 ;auto comment tools
 (defun insert-comment-start ()
@@ -51,6 +51,6 @@
 (global-set-key [f10] 'insert-comment-stop)
 
 ;ido-mode
-(add-to-list 'load-path "~/.emacs.d/ido/")
+(add-to-list 'load-path "/home/fortitude/.emacs.d/ido/")
 (require 'ido)
 (ido-mode t)

@@ -451,7 +451,9 @@ The timer is used only if `post-gc-hook' is not available.")
                                  (split-string (prin1-to-string text) "\n")
                                  "\\n"))
                (when multibyte
-                 (princ ".encode('ISO-8859-1').decode('UTF-8')")))
+		 ;;Hack,remove the encode operation
+;;                 (princ ".encode('ISO-8859-1').decode('UTF-8')")))
+                 (princ ".decode('UTF-8')")))
              (setq done t)))
           ((symbolp expression)
            (let ((name (symbol-name expression)))

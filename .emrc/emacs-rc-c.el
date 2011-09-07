@@ -45,24 +45,3 @@
 	c-basic-offset 2
 	indent-tabs-mode nil))
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
-
-
-(defun alexott/cedet-hook ()
-  (local-set-key [(control return)] 'semantic-ia-complete-symbol-menu)
-  (local-set-key "\C-c?" 'semantic-ia-complete-symbol)
-  (local-set-key "\C-c>" 'semantic-complete-analyze-inline)
-  (local-set-key "\C-c=" 'semantic-decoration-include-visit)
-  (local-set-key "\C-cj" 'semantic-ia-fast-jump)
-  (local-set-key "\C-cb" 'semantic-mrub-switch-tags)
-  (local-set-key "\C-cs" 'semantic-ia-show-summary)
-  (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle))
-(add-hook 'c-mode-common-hook 'alexott/cedet-hook)
-(add-hook 'emacs-lisp-mode-hook 'alexott/cedet-hook)
-
-(defun alexott/c-mode-cedet-hook ()
-  ;(local-set-key "." 'semantic-complete-self-insert)
-  ;(local-set-key ">" 'semantic-complete-self-insert)
-  (local-set-key "\C-ch" 'eassist-switch-h-cpp)
-  (local-set-key "\C-cm" 'eassist-list-methods)
-  (local-set-key "\C-cr" 'semantic-symref))
-(add-hook 'c-mode-common-hook 'alexott/c-mode-cedet-hook)

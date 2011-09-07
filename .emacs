@@ -3,6 +3,10 @@
 ;COMMENT STYLE: use 1 semicolon to start comment.
 ;ELISP STYLE: use 2 space to seperate code,close bracket should follow the last sentence.
 ;BLOCK MARK:use ///// style to start/end block
+;NOTE:
+; 1) Please donnot use ~ in directory,'cause ROOT share the same emacs configuration
+;    file with user fortitude.zhang,if your use ~ in directory,emacs started by ROOT won't 
+;    be able to find the right elisp source.
 ;////////////////////////////////////////////////NOTES END///////////////////////////////////
 
 ;////////////////////////////////LOAD RC////////////////////////////////////////////////
@@ -53,7 +57,7 @@
  '(ecb-layout-window-sizes (quote (("my-left-right" (0.14912280701754385 . 0.4772727272727273) (0.14912280701754385 . 0.5) (0.14912280701754385 . 0.4772727272727273) (0.14912280701754385 . 0.25) (0.14912280701754385 . 0.25)))) t)
  '(ecb-options-version "2.40" t)
  '(ecb-source-path (quote ((#("/home/fortitude/org" 0 19 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu")) #("/home/fortitude/org" 0 19 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu"))) ("/mnt/work/006-reddit/reddit-git" "reddit-code") ("/mnt/work/007-pylons/mypylonssite/zhamiao" "zhamiao") ("/mnt/work/001-android" "android") ("/mnt/work/007-pylons/wurdig/wurdig" "wurdig-pylons"))))
- '(org-agenda-files (quote ("~/org/201108M.org")))
+ '(org-agenda-files (quote ("~/org/201109M.org")))
  '(weblogger-config-alist (quote (("default" "http://blog.4nian.com/xmlrpc.php" "admin" "" "1")))))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.

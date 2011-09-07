@@ -2,7 +2,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;USER SPEFICIED VARIABLE HERE;;;;;;;;;;;;;;;;;;;;;;;;
 (defvar *ftp-process* nil)
-(setq 4nian.com (netrc-machine (netrc-parse "~/.netrc") "www.4nian.com" t))
+(setq 4nian.com (netrc-machine (netrc-parse "/home/fortitude/.netrc") "www.4nian.com" t))
 (defvar *ftp-user* (netrc-get 4nian.com "login"))
 (defvar *ftp-host* "www.4nian.com")
 (defvar *ftp-password* (netrc-get 4nian.com "password"))
@@ -12,7 +12,7 @@
 (defvar *ftp-last-action-time* 0)
 
 ;remote path and local path
-(defconst *ftp-HOME* "~/muse/public_html/")
+(defconst *ftp-HOME* "/home/fortitude/muse/public_html/")
 (defconst *ftp-WEB* "/domains/4nian.com/public_html/zdy/")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ACTUALL WRAPPER,CORE FUNCTIONS;;;;;;;;;;;;;;;;;;;;;

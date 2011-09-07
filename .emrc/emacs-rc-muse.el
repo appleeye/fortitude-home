@@ -7,15 +7,15 @@
 
 ;create my project related materials
 (muse-derive-style "my-page-html" "html"
-                   :header "~/muse/header.tmpl"
-                   :footer "~/muse/footer.tmpl")
+                   :header "/home/fortitude/muse/header.tmpl"
+                   :footer "/home/fortitude/muse/footer.tmpl")
 
 (setq muse-project-alist
       `(("4nian" 
-	 (,@(muse-project-alist-dirs "~/muse")
+	 (,@(muse-project-alist-dirs "/home/fortitude/muse")
 	  :force-publish ("index" "music" "tech" "reading" "traveling")
 	  :default "index")
-          ,@(muse-project-alist-styles "~/muse"
-				       "~/muse/public_html"
+          ,@(muse-project-alist-styles "/home/fortitude/muse"
+				       "/home/fortitude/muse/public_html"
 				       "my-page-html"))))
 

@@ -1,22 +1,22 @@
 ;html settings here
 ;for html mode helper
 ; Emacs Load Path
-(add-to-list 'load-path "~/.emacs.d/html-helper-mode/")
+(add-to-list 'load-path "/home/fortitude/.emacs.d/html-helper-mode/")
 (autoload 'html-helper-mode "html-helper-mode" "Yay HTML" t)
 (setq auto-mode-alist (cons '("\\.html$" . html-helper-mode) auto-mode-alist))
 
-;(add-to-list 'load-path "~/.emacs.d/weblogger/")
+;(add-to-list 'load-path "/home/fortitude/.emacs.d/weblogger/")
 ;(require 'weblogger)
-(load-file "~/.emacs.d/weblogger/xml-rpc.el")
-(load-file "~/.emacs.d/weblogger/weblogger.el")
+(load-file "/home/fortitude/.emacs.d/weblogger/xml-rpc.el")
+(load-file "/home/fortitude/.emacs.d/weblogger/weblogger.el")
 
 ;(setq weblogger-config-alist (quote (("default" ("Server URL" . "http://blog.4nian.com/xmlrpc.php")  ("Username" . "admin") ("Password" . "19851007") ("Weblog ID" . "1")))))
 
 ;Switch to the new org2blog interface to post to my wordpress
- (setq load-path (cons "~/Source/org2blog/" load-path))
- (require 'org2blog-autoloads)
+(setq load-path (cons "/home/fortitude/Source/org2blog/" load-path))
+(require 'org2blog-autoloads)
 ;set my blog info
-(setq blog (netrc-machine (netrc-parse "~/.netrc") "wordpress" t))
+(setq blog (netrc-machine (netrc-parse "/home/fortitude/.netrc") "wordpress" t))
 (setq org2blog/wp-blog-alist
        '(("wordpress"
           :url "http://blog.4nian.com/xmlrpc.php"

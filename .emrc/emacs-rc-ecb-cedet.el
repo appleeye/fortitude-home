@@ -41,6 +41,29 @@
 (global-set-key [f7] 'semantic-ia-fast-jump)
 (global-set-key [f8] 'semantic-mrub-switch-tags)
 
+(defun alexott/cedet-hook ()
+  (local-set-key [(control return)] 'semantic-ia-complete-symbol-menu)
+  (local-set-key "\C-c?" 'semantic-ia-complete-symbol)
+  (local-set-key "\C-c>" 'semantic-complete-analyze-inline)
+  (local-set-key "\C-c=" 'semantic-decoration-include-visit)
+  (local-set-key "\C-cj" 'semantic-ia-fast-jump)
+  (local-set-key "\C-cb" 'semantic-mrub-switch-tags)
+  (local-set-key "\C-cs" 'semantic-ia-show-summary)
+  (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle))
+(add-hook 'c-mode-common-hook 'alexott/cedet-hook)
+(add-hook 'emacs-lisp-mode-hook 'alexott/cedet-hook)
+(add-hook 'python-mode-hook 'alexott/cedet-hook)
+
+(defun alexott/gen-mode-cedet-hook ()
+  ;(local-set-key "." 'semantic-complete-self-insert)
+  ;(local-set-key ">" 'semantic-complete-self-insert)
+  (local-set-key "\C-ch" 'eassist-switch-h-cpp)
+  (local-set-key "\C-cm" 'eassist-list-methods)
+  (local-set-key "\C-cr" 'semantic-symref))
+(add-hook 'c-mode-common-hook 'alexott/gen-mode-cedet-hook)
+(add-hook 'emacs-lisp-mode-hook 'alexott/gen-mode-cedet-hook)
+(add-hook 'python-mode-hook 'alexott/gen-mode-cedet-hook)
+
 ;here comes ecb settings
 
 ;ecb layout setting
@@ -56,7 +79,7 @@
 
 (ede-cpp-root-project "Quagga"
                 :name "quagga"
-                :file "~/Source/quagga/TODO"
+                :file "/home/fortitude/Source/quagga/TODO"
                 :include-path '("/"
                                 "/bgpd/"
                                 "/Iib/"
@@ -66,7 +89,7 @@
 
 (ede-cpp-root-project "wireshark"
 		      :name "wireshark"
-		      :file "~/Source/wireshark/README"
+		      :file "/home/fortitude/Source/wireshark/README"
 		      :include-path '("/"
 				      "/epan"
 				      "/epan/dissectors"
@@ -74,6 +97,6 @@
 
 (ede-cpp-root-project "emacs"
 		      :name "emacs"
-		      :file "~/Source/emacs23-src/README")
+		      :file "/home/fortitude/Source/emacs23-src/README")
 		      
 

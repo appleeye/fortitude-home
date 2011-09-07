@@ -1,3 +1,10 @@
+**** 系统工具
+ 
+ 1） GNU findutils
+
+    由于工作的原因，经常需要使用到find和xargs这两个命令，后来抽空在网上查阅了相关资料，find以及xargs等命令，由一个GNU findutils的包提供，
+该包的文档在GNU网站上已经提供，请访问[[http://www.gnu.org/software/findutils/manual/html_mono/find.html][http://www.gnu.org/software/findutils/manual/html_mono/find.html]]查阅。
+
 **** 中文环境
  
  1) Jave 中文
