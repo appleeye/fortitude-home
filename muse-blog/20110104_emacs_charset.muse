@@ -1,0 +1,43 @@
+* 20110104-22:11:00 对于EMACS language environment/coding system/charset的理解
+
+  即然已经列出了这个题目，就需要将其完成；当然，如果习惯于查阅英文资料的话，可以直接去gnu网站上查阅EMACS的网站，下面这些内容，也是摘自于该网站。
+  
+  1、language environment
+  
+  语言环境用于控制EMACS读取文件时所选取的编码系统(即下面的coding system)，适用于读取文件、收取邮件、以及其他你读入EMACS的文本，同时，它也可以用来控制你创建文件时所使用的默认编码系统。
+  
+  2、coding system
+  
+  由于语言的多样化，就出现了多种编码系统(如LINUX上的utf-8、chinese-gbk、chinese-gb等)，EMACS在内部处理中，并不使用这些多种多样的编码系统，实际上，它内部采用一种自有的编码系统(emacs-internal)，在输入或者输出时，分别进行外部编码系统--->内部编码系统、内部编码系统--->外部编码系统的转换。
+  
+  3、charset
+  
+  在emacs中，charset即character set的缩写，汉语即对应于我们的字符集，就是通过2字节或者多字节(如GB2312采用2字节、UTF-8采用1~6可变字节表示字符)的定义，来表示一个语言所包含的各种字符（如汉字等），在EMACS中，可以通过list-charset-chars来查看特定字符集的内容。
+  
+  根据第2点的介绍，不论文件源编码是什么，emacs可以做到识别读入并转化为自身的编码系统，并按照用户设置的优先编码系统，寻找合适的编码进行输出显示，而编码系统又会影响字符集的选择，从而最终影响字体的选择，
+  
+  对于上面列出的概念，可能并不易于理解，可以借助于下面这个示例进行分析：
+  
+  1、在设置：prefer-coding-system为utf-8-auto、set-language-environment为UTF-8时，在EMACS中，针对于一个新打开的包含中文编码，将光标定位于一个中文字符，键入c-u c-x =命令后，将显示如下结果：
+  
+  character: 用 (29992, #o72450, #x7528)
+  preferred charset: unicode-bmp (Unicode Basic Multilingual Plane (U+0000..U+FFFF))
+  code point: 0x7528
+  syntax: w     which means: word
+  category: .:Base, C:2-byte han, c:Chinese, h:Korean, j:Japanese, |:line breakable
+  buffer code: #xE7 #x94 #xA8
+  file code: #xE7 #x94 #xA8 (encoded by coding system utf-8-unix)
+  display: by this font (glyph code)
+  xft:-unknown-文泉驿正黑-normal-normal-normal-*-14-*-*-*-*-0-iso10646-1 (#x2FDC)
+  
+  2、在设置：prefer-coding-system为chinese-gbk、set-language-environment为Chinese-GBK时，在EMACS中，针对于一个新打开的包含中文编码，将光标定位于一个中文字符，键入c-u c-x =命令后，将显示如下结果：
+  
+  character: 用 (29992, #o72450, #x7528)
+  preferred charset: chinese-gbk (GBK Chinese simplified.)
+  code point: 0xD3C3
+  syntax: w     which means: word
+  category: .:Base, C:2-byte han, c:Chinese, h:Korean, j:Japanese, |:line breakable
+  buffer code: #xE7 #x94 #xA8
+  file code: #xE7 #x94 #xA8 (encoded by coding system utf-8-unix)
+  display: by this font (glyph code)
+  xft:-WenQuanYi-WenQuanYi Bitmap Song-normal-normal-normal-*-13-*-*-*-*-*-iso10646-1 (#x46D8)

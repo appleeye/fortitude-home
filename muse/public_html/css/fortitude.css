@@ -225,3 +225,13 @@ blockquote {
 .src {
     background-color: #dcdcdc;
 }
+
+.entry {
+    border-color: #999999;
+    border-width: 1px 1px 1px 1px;
+    border-style: dotted;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}

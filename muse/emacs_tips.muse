@@ -32,6 +32,28 @@
 
    通过C-u 0 M-x byte-compile-directory可无提示的byte-compile目录下的所有el文件。
 
+ - add-space-in-lines-begin-for-region (为region的每一行添加空格，20110909，为了自己编码方便，我写了这个函数)
+
+       <src type="emacs-lisp">
+    (defun add-space-in-line-begin-for-region(col)
+      "Add space in line begin for region.
+    Usage:C-u number-of-space-you-want-to M-x add-space-in-lines-begin-for-region.
+    Of course,you can bind this function to a command such as C-x s,then you can
+    type C-u 2 C-x s to insert spaces."
+      (interactive "P")
+      (let* ((rb (region-beginning))
+    	 (re (region-end))
+      	 (lines (count-lines rb re)))
+        (goto-char rb)
+        (setq col (prefix-numeric-value col))
+        (forward-line 0)
+        (while (> lines 0)
+          (beginning-of-line)
+          (insert (make-string col ?\s))
+          (forward-line)
+          (setq lines (1- lines)))))
+       </src>
+
 ----
 
 *** 其他

@@ -12,10 +12,17 @@
 ;hippie-expand
 (global-set-key (kbd "M-/") 'hippie-expand)
 
+(defun my-kill-buffer (buffer)
+  "kill buffer,but filter some special buffer which cannot be killed"
+  (if (not (string-equal "\*Pymacs\*" (buffer-name buffer)))
+      (kill-buffer buffer)))
+
 (defun kill-all-buffer ()
   "kill all the buffer"
   (interactive)
-  (mapcar 'kill-buffer (buffer-list)))
+  (mapcar 'my-kill-buffer (buffer-list))
+  ;;when all buffer killed,create the scratch buffer
+  (switch-to-buffer (get-buffer-create "*scratch*")))
 (global-set-key [f12] 'kill-all-buffer)
 
 ;paren match
@@ -54,3 +61,22 @@
 (add-to-list 'load-path "/home/fortitude/.emacs.d/ido/")
 (require 'ido)
 (ido-mode t)
+
+(defun add-space-in-each-line-beginning-of-region(col)
+  "Add space in the beginning of each line in a region.
+  Usage:
+C-u number-of-space-you-want-to M-x add-space-in-lines-begin-for-region.
+Of course,you can bind this function to a command such as C-x s,then you can
+type C-u 2 C-x s to insert spaces."
+  (interactive "P")
+  (let* ((rb (region-beginning))
+	 (re (region-end))
+  	 (lines (count-lines rb re)))
+    (goto-char rb)
+    (setq col (prefix-numeric-value col))
+    (forward-line 0)
+    (while (> lines 0)
+      (beginning-of-line)
+      (insert (make-string col ?\s))
+      (forward-line)
+      (setq lines (1- lines)))))
