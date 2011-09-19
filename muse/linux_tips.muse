@@ -14,3 +14,11 @@
  2) Linux排版（Tex、LaTex、XeTex）
 
     [[http://liyanrui.is-programmer.com/2009/10/21/not-just-for-chinese.12264.html][不仅仅是为了中文---一篇关于中文排版的好文]]
+
+**** Gentoo
+
+ 1) Gentoo OpenRC迁移指导
+   
+    最近偶然间读到Gentoo OpenRC的迁移指导，OpenRC用来取代Gentoo原有的以bash-shell编写的RC系统，并从baselayout1中剥离出来，和baselayout2成为独立的两个包，改用C写成，从而更方便的实现系统调用，以便支持更多的平台，如Gentoo/FreeBSD、Gentoo Embedded。
+
+    其链接为：[[http://www.gentoo.org/doc/en/openrc-migration.xml][http://www.gentoo.org/doc/en/openrc-migration.xml]]    

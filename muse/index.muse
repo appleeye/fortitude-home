@@ -24,9 +24,10 @@
 
 *** 当前兴趣与业余任务
  - 翻译GNU Emacs Lisp参考文档[[http://blog.4nian.com/org/ELISP.html][点击查看]]
+   - 2011/09/19：完成第四章的翻译。
  - 研究Emacs
  - 开发我自己的一个网站（基于pylons+sqlalchemy+yui[1]），山寨reddit，目前开发正在进行中...
 
 Footnotes: 
-[1]  yui提供了javascript库以及css库，对于javscript库，后续有可能我会更换为更为流行的jQuery。
+[1]  yui提供了javascript库以及css库，对于javascript库，后续有可能我会更换为更为流行的jQuery。
 

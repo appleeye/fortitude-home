@@ -36,88 +36,20 @@
                     <div class="yui-b"> 
                         <!-- start: stack grids here --> 
     <!-- Page published by Emacs Muse begins here --> 
-<hr>
-
-<h4>扩展包</h4>
-
-<ul>
-<li><a href="http://www.enigmacurry.com/2008/05/09/emacs-as-a-powerful-python-ide/">将Emacs打造为强大的的PythoIDE</a></li>
-</ul>
-
-<hr>
-
-
-<h4>快捷键</h4>
-
-<ul>
-<li>C-u C-x =
-
-<p>此快捷键用来查看当前point所在字符的编码信息（如utf-8/gbk），关于UTF-8编码相关介绍，请参考<sup><a class="footref" name="fnr.1" href="#fn.1">1</a></sup>。</p></li>
-
-<li>C-s / C-r
-
-<p>此快捷键分别对应于正向搜索和反向搜索，结合使用可以快速在buffer中查找固定文字，比如适用于在Mew中查找包含特定标题的邮件。</p></li>
-</ul>
-
-<hr>
-
-
-<h4>交互函数</h4>
-
-<ul>
-<li>describe-character-set
-
-<p>此函数用来查看指定的字符集信息，可查看Emacs支持的如unicode-bmp、unicode等字符集信息。</p></li>
-
-<li>list-colors-display
-
-<p>此函数直观显示十六进制的色彩码表，非常适用于编写CSS快速查找色彩定义。</p></li>
-
-<li>byte-recompile-directory
-
-<p>通过C-u 0 M-x byte-compile-directory可无提示的byte-compile目录下的所有el文件。</p></li>
-
-<li>add-space-in-lines-begin-for-region (为region的每一行添加空格，20110909，为了自己编码方便，我写了这个函数)</li>
-</ul>
-
-<center>
-<p></p>
-</center> 
-
-<pre class="src">
-    (defun add-space-in-line-begin-for-region(col)
-      <span style="color: #ffa07a;">"Add space in line begin for region.
-    Usage:C-u number-of-space-you-want-to M-x add-space-in-lines-begin-for-region.
-    Of course,you can bind this function to a command such as C-x s,then you can
-    type C-u 2 C-x s to insert spaces."</span>
-      (interactive <span style="color: #ffa07a;">"P"</span>)
-      (let* ((rb (region-beginning))
-         (re (region-end))
-         (lines (count-lines rb re)))
-        (goto-char rb)
-        (setq col (prefix-numeric-value col))
-        (forward-line 0)
-        (while (&gt; lines 0)
-          (beginning-of-line)
-          (insert (make-string col ?\s))
-          (forward-line)
-          (setq lines (1- lines)))))
-       
-</pre>
-
-<hr>
-
-
-<h4>其他</h4>
-
 <blockquote>
-<p class="quoted">网络上有朋友整理了Emacs常用的命令列表，可以参考这个链接<sup><a class="footref" name="fnr.2" href="#fn.2">2</a></sup>。</p>
+<p class="quoted">尽管在我的工作与生活中，大多数情况下都只与计算机相关的人和事打交道，然而，我不可能做到与经济或管理完全隔绝，因此，很有必要将我在日常生活中所读到的有关经济或管理方面的知识，记录起来，以便在我因为遗忘而忘记其某些重要名词的意义时进行查阅。</p>
 </blockquote>
 
-<hr>
-<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a>  <a href="http://www.pythonclub.org/python-basic/encode-detail">Unicode编码，UCS、UTF、BMP、BOM等名词介绍</a></p>
+<h3>2011</h3>
 
-<p class="footnote"><a class="footnum" name="fn.2" href="#fnr.2">2.</a>  <a href="http://www.cse.unl.edu/~choueiry/S08-476-876/Documents/emacs_ref.html">Emacs Commands List</a></p>
+<dl>
+<dd>  长尾理论<sup><a class="footref" name="fnr.1" href="#fn.1">1</a></sup>::
+长尾理论（The Long Tail）是网络时代兴起的一种新理论，由美国人克里斯·安德森提出。
+长尾理论认为，由于成本和效率的因素，当商品储存流通展示的场地和渠道足够宽广，商品生产成本急剧下降以至于个人都可以进行生产，并且商品的销售成本急剧降低时，几乎任何以前看似需求极低的产品，只要有卖，都会有人买。这些需求和销量不高的产品所占据的共同市场份额，可以和主流产品的市场份额 相比，甚至更大。</dd>
+</dl>
+
+<hr>
+<p class="footnote"><a class="footnum" name="fn.1" href="#fnr.1">1.</a>  <a href="http://baike.baidu.com/view/327983.htm">百度百科上关于“长尾理论”的介绍</a></p>
 
 
 <!-- Page published by Emacs Muse ends here -->

@@ -1,52 +1,44 @@
-;////////////////////////////////////////////////NOTES BEGIN/////////////////////////////////
-;AUTHOR:fortitude.zhang@gmail.com
-;COMMENT STYLE: use 1 semicolon to start comment.
-;ELISP STYLE: use 2 space to seperate code,close bracket should follow the last sentence.
-;BLOCK MARK:use ///// style to start/end block
-;NOTE:
-; 1) Please donnot use ~ in directory,'cause ROOT share the same emacs configuration
-;    file with user fortitude.zhang,if your use ~ in directory,emacs started by ROOT won't 
-;    be able to find the right elisp source.
-;////////////////////////////////////////////////NOTES END///////////////////////////////////
+;; Main emacs configuration files.
+;; This file will try to load all kinds specific extensions.
 
-;////////////////////////////////LOAD RC////////////////////////////////////////////////
-;load look and feel rc
+;; Load look and feel rc.
 (load "~/.emrc/emacs-rc-look-feel.el")
 
-;load org-mode rc
+;; Load org-mode rc.
 (load "~/.emrc/emacs-rc-org.el")
 
-;load html rc
+;; Load html rc.
 (load "~/.emrc/emacs-rc-html.el")
 
-;load mew rc
+;; Load mew rc
 (load "~/.emrc/emacs-rc-mew.el")
 
-;load cedet-ecb rc
+;; Load cedet-ecb rc.
 (load "~/.emrc/emacs-rc-ecb-cedet.el")
 
-;load c rc
+;; load c rc.
 (load "~/.emrc/emacs-rc-c.el")
 
-;load java rc
+;; Load java rc.
 (load "~/.emrc/emacs-rc-java.el")
 
-;load muse
+;; Load muse rc.
 (load "~/.emrc/emacs-rc-muse.el")
 
-;load net
+;; Load net rc.
 (load "~/.emrc/emacs-rc-net.el")
 
-;load tex
+;; Load tex rc.
 (load "~/.emrc/emacs-rc-tex.el")
 
-;load python
+;; Load python rc.
 (load "~/.emrc/emacs-rc-python.el")
 
-;load misc
-(load "~/.emrc/emacs-rc-misc.el")
+;; Load lisp rc.
+(load "~/.emrc/emacs-rc-lisp.el")
 
-;////////////////////////////////LOAD RC END///////////////////////////////////////////
+;; Load misc rc.
+(load "~/.emrc/emacs-rc-misc.el")
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.

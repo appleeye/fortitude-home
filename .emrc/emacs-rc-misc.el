@@ -1,15 +1,15 @@
-;;misc packages and extensions lay here
+;; Misc packages and extensions lay here.
 
-;remember the session
+;; Remember the session.
 (require 'session)
 (add-hook 'after-init-hook 'session-initialize)
 
-;isswitchb mode for fast switch between buffers
+;; Isswitchb mode for fast switch between buffers.
 (iswitchb-mode 1)
 (require 'bs)
 (global-set-key (kbd "C-x C-b") 'bs-show)
 
-;hippie-expand
+;; Hippie-expand.
 (global-set-key (kbd "M-/") 'hippie-expand)
 
 (defun my-kill-buffer (buffer)
@@ -21,11 +21,11 @@
   "kill all the buffer"
   (interactive)
   (mapcar 'my-kill-buffer (buffer-list))
-  ;;when all buffer killed,create the scratch buffer
+  ;; When all buffer killed,create the scratch buffer.
   (switch-to-buffer (get-buffer-create "*scratch*")))
 (global-set-key [f12] 'kill-all-buffer)
 
-;paren match
+;; Paren match.
 (defun match-paren (arg)
   "Go to the matching paren if on a paren; otherwise insert %."
   (interactive "p")
@@ -35,29 +35,27 @@
 
 (global-set-key "%" 'match-paren)
           
-;yasnippet settings
+;; Yasnippet settings.
 (add-to-list 'load-path "/home/fortitude/.emacs.d/yasnippet-0.6.1c")
 (require 'yasnippet)
 (yas/initialize)
 (yas/load-directory "/home/fortitude/.emacs.d/yasnippet-0.6.1c/snippets")
 
-;auto comment tools
+;; Auto comment tools.
 (defun insert-comment-start ()
   (interactive)
-  ;comment start
   (insert "/* Start: Impl. ipv4-labeled-unicast by foritude.zhang @ 2010.*/")
 )
 (defun insert-comment-stop ()
-  ;comment stop"
   (interactive)
   (insert "/* Stop: Impl. ipv4-labeled-unicast by foritude.zhang @ 2010.*/")
 )
 
-;WTF,i will never comment like this way when i code at home:)
+;; WTF,i will never comment like this way when i code at home.
 (global-set-key [f9] 'insert-comment-start)
 (global-set-key [f10] 'insert-comment-stop)
 
-;ido-mode
+;; Ido-mode.
 (add-to-list 'load-path "/home/fortitude/.emacs.d/ido/")
 (require 'ido)
 (ido-mode t)
@@ -80,3 +78,7 @@ type C-u 2 C-x s to insert spaces."
       (insert (make-string col ?\s))
       (forward-line)
       (setq lines (1- lines)))))
+
+;; Load tea-time to get fancy notification:)
+(add-to-list 'load-path "/home/fortitude/.emacs.d/tea-time/")
+(require 'tea-time)
