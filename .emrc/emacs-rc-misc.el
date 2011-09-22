@@ -82,3 +82,9 @@ type C-u 2 C-x s to insert spaces."
 ;; Load tea-time to get fancy notification:)
 (add-to-list 'load-path "/home/fortitude/.emacs.d/tea-time/")
 (require 'tea-time)
+
+;; Test:
+;;     Load ibus-el to support in-spot input
+;;(add-to-list 'load-path "/home/fortitude/.emacs.d/ibus")
+;;(require 'ibus)
+;;(add-hook 'after-init-hook 'ibus-mode-on)
