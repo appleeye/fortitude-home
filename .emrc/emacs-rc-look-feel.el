@@ -16,8 +16,9 @@
 (setq locale-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 (add-to-list 'default-frame-alist '(font . "文泉驿等宽微米黑:12"))
-;enable xft font-backend,must be set in the Xresource file in order to 
-;make effect in the first frame
+;; (add-to-list 'default-frame-alist '(font . "Bitstream Vera Sans mono:12"))
+;; Enable xft font-backend,must be set in the Xresource file in order to 
+;; make effect in the first frame
 (add-to-list 'default-frame-alist '(font-backend . "xft"))
 
 ;startup maximize

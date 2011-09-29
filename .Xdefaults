@@ -11,10 +11,10 @@ URxvt*fading:	        10		!term unfocus
 #URxvt*font:	     		-lfp-gamow-medium-r-normal-*-*-90-*-*-c-*-iso8859-5
 !urxvt*font:			-*-terminus-medium-*-*-*-17-*-*-*-*-*-koi8-*
 !urxvt*font			xft:Monospace:pixelsize=21
-!urxvt*font:  		xft:matto:antialias=true:size=8
-!urxvt*font:			xft:Bitstream Vera Sans mono:size=9
-URxvt.font:xft:wenquanyi zen hei:medium:pixelsize=13:antialias=True
-URxvt.boldfont:xft:wenquanyi zen hei:bold:pixelsize=13:antialias=True
+!urxvt*font:  		xft:matto:antialias=true:size=15
+urxvt*font:			xft:Bitstream Vera Sans mono:size=14
+!URxvt.font:xft:wenquanyi micro hei:medium:pixelsize=15:antialias=False
+!URxvt.boldfont:xft:wenquanyi micro hei:bold:pixelsize=15:antialias=False
 urxvt*scrollBar:		true
 urxvt*scrollBar_floating:	true
 urxvt*scrollBar_right:	false

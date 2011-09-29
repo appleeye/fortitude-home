@@ -988,6 +988,7 @@ Value is a list (ido-text dir cur-list ignored-list matches).")
     (and (boundp 'ido-completing-read) (= ido-use-mycompletion-depth (minibuffer-depth)))))
 
 (defvar ido-trace-enable nil)
+(setq ido-trace-enable t)
 
 (defun ido-trace (p &optional s retval)
   (if ido-trace-enable
@@ -2763,11 +2764,24 @@ for first matching file."
     (setq res (mapcar 'ido-word-matching-substring items))
     (setq res (delq nil res)) ;; remove any nil elements (shouldn't happen)
     (setq alist (mapcar 'ido-makealist res)) ;; could use an  OBARRAY
-
+    
     ;; try-completion returns t if there is an exact match.
-    (let ((completion-ignore-case ido-case-fold))
-
-    (try-completion subs alist))))
+    (setq result (let ((completion-ignore-case ido-case-fold))
+		   (try-completion subs alist)))
+    ;; HACK by fortitude.zhang@gmail.com 2011/09/29 00:04.
+    ;; This is not a quite good solution but a workaround to handle the following annoying problem
+    ;; when using ido-mode,and when I have more spare time I will consider it more carefully:
+    ;;   Suppose you have an directory,there are to sub-directory in it,named "bla" and "xx-bla"(Note,
+    ;;   They share the same substring "bla"),when in ido-mode,you want to get the realtime hint after
+    ;;   typed "bla",you will get an elisp signal saying that 't' is not squence.this error is emitted in
+    ;;   (length ido-common-match-string) statement of function 'ido-completions'.
+    ;; So The real cause to this problem is ido-common-match-string is 't',while elisp builtin function 'length'
+    ;; require a sequence parameter.
+    ;; Therefore,I do a new wrapper to detect the return value of function 'try-completion',if it is 't',I will
+    ;; return the 'subs' instead.
+    (if (eq result t)
+	subs
+	result)))
 
 (defun ido-word-matching-substring (word)
   ;; Return part of WORD before 1st match to `ido-change-word-sub'.
@@ -3380,7 +3394,6 @@ For details of keybindings, do `\\[describe-function] ido-find-file'."
 (defun ido-completions (name candidates predicate require-match)
   ;; Return the string that is displayed after the user's text.
   ;; Modified from `icomplete-completions'.
-  
   (let* ((comps ido-matches)
 	 (ind (and (consp (car comps)) (> (length (cdr (car comps))) 1)
 		   ido-merged-indicator))
