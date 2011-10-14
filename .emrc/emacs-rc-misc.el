@@ -56,7 +56,7 @@
 (global-set-key [f10] 'insert-comment-stop)
 
 ;; Ido-mode.
-(add-to-list 'load-path "/home/fortitude/.emacs.d/ido/")
+;;(add-to-list 'load-path "/home/fortitude/.emacs.d/ido/")
 (require 'ido)
 (ido-mode t)
 
