@@ -1,16 +1,21 @@
-;muse rc
+;; Muse related extensions are defined here.
+
 (require 'muse)
 (require 'muse-mode)
 (require 'muse-html)
 (require 'muse-project)
 (require 'muse-colors)
 
-;create my project related materials
+;; Create my project related materials.
 (muse-derive-style "my-page-html" "html"
                    :header "/home/fortitude/muse/header.tmpl"
                    :footer "/home/fortitude/muse/footer.tmpl")
+;; For poem entry.
+(muse-derive-style "my-poem-html" "html"
+                   :header "/home/fortitude/muse/l1_sub_header.tmpl"
+                   :footer "/home/fortitude/muse/l1_sub_footer.tmpl")
 
-;some symbols named muse-blog-* copied from muse-blog.el
+;; Some symbols named muse-blog-* copied from muse-blog.el.
 (muse-derive-style "my-blog-html" "html"
                    :header "/home/fortitude/muse-blog/blog_header.tmpl"
                    :footer "/home/fortitude/muse-blog/blog_footer.tmpl"
@@ -18,7 +23,7 @@
                    :entry-template 'muse-blog-html-entry-template
                    :before-end 'muse-blog-html-munge-buffer)
 
-;;(muse-derive-style "my-blog-rss" "html"
+;; (muse-derive-style "my-blog-rss" "html"
                    ;; :suffix         'muse-blog-rss-extension
                    ;; :before-end     'muse-blog-rss-munge-buffer
                    ;; :header         'muse-blog-rss-header
@@ -28,18 +33,30 @@
                    ;; :entry-template 'muse-blog-rss-entry-template
                    ;; :base-url       'muse-blog-rss-base-url)
 
-;muse blog system
+;; Muse blog system
 (add-to-list 'load-path "/home/fortitude/Source/muse-blog")
 (require 'muse-blog)
 
 (setq muse-project-alist
       `(("4nian" 
 	 (,@(muse-project-alist-dirs "/home/fortitude/muse")
-	  :force-publish ("index" "music" "tech" "reading" "traveling")
+;;	  :force-publish ("index" "music" "tech" "reading" "traveling")
 	  :default "index")
-          ,@(muse-project-alist-styles "/home/fortitude/muse"
-				       "/home/fortitude/muse/public_html"
-				       "my-page-html"))
+;;          ,@(muse-project-alist-styles "/home/fortitude/muse"
+;;				       "/home/fortitude/muse/public_html"
+;;				       "my-page-html")
+	  (:base "my-page-html"
+		 :path "/home/fortitude/muse/public_html"
+		 :include "/home/fortitude/muse/[^/]+$")
+
+	  (:base "my-poem-html"
+		 :path "/home/fortitude/muse/public_html/poem"
+		 :include "/home/fortitude/muse/poem/[^/]+$")
+
+;;	  ,@(muse-project-alist-styles "/home/fortitude/muse/poem"
+;;				       "/home/fortitude/muse/public_html/poem"
+;;				       "my-poem-html")
+	  )
 	("Blog"
 	 (,@(muse-project-alist-dirs "/home/fortitude/muse-blog")
 	  :force-publish ("index")

@@ -1,4 +1,4 @@
-** 读书笔记
+**  个人收藏
 
 | [[./reading_ecoman.html][经管]] | [[./reading_tech.html][技术]] | [[./reading_novel.html][小说]] | [[./reading_pe.html][散文与诗]]
 
@@ -12,11 +12,11 @@
 
  - 小说
 
-  1） 甄选中......
+  1） Sons of Thunder --- Susan May Warren
 
  - 历史
 
-  1) 《辛亥---摇晃的中国》---张鸣
+  1) 《辛亥---摇晃的中国》--- 张鸣
 
 ** 已读书目
 

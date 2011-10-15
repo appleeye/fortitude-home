@@ -16,10 +16,6 @@
 
 ----
 
- - MPLS VPN/BGP Routing
-
-----
-
  - Gentoo Linux/Linux
  
   0) [[./linux_tips.html][Linux经验分享及汇总]]

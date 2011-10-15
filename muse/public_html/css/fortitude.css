@@ -235,3 +235,10 @@ blockquote {
     margin-bottom: 10px;
     padding-bottom: 10px;
 }
+
+.poem {
+    font: italic normal 15px SimSun, FangSong;
+    align: center;
+    margin: 20 20 20 20;
+    border: 2px;
+}
