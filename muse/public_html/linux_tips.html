@@ -36,7 +36,7 @@
                     <div class="yui-b"> 
                         <!-- start: stack grids here --> 
     <!-- Page published by Emacs Muse begins here --> 
-<h5>系统工具</h5>
+<h5>系统基础</h5>
 
 <blockquote>
 <p class="quoted">1） GNU findutils</p>
@@ -46,6 +46,31 @@
 <p class="quoted">由于工作的原因，经常需要使用到find和xargs这两个命令，后来抽空在网上查阅了相关资料，find以及xargs等命令，由一个GNU findutils的包提供，
 该包的文档在GNU网站上已经提供，请访问<a href="http://www.gnu.org/software/findutils/manual/html_mono/find.html">http://www.gnu.org/software/findutils/manual/html_mono/find.html</a>查阅。</p>
 </blockquote>
+
+<blockquote>
+<p class="quoted">2） ANSI color（让你的SHELL脚本更加多彩）</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted"><a href="http://en.wikipedia.org/wiki/ANSI_color">维基百科上关于ANSI color的介绍</a></p>
+</blockquote>
+
+<blockquote>
+<p class="quoted">借助于上面介绍的内容，可供你写出诸如如下这样多彩的shell脚本：</p>
+</blockquote>
+
+<blockquote>
+<p class="quoted"></p>
+</blockquote> 
+
+<pre class="src">
+    # This will output the text in blue color.
+    echo -e <span style="color: #ffa07a;">"\033[34mWelcome to the blue color wolrd"</span>
+
+    # This will output the text in red color.
+    echo -e <span style="color: #ffa07a;">"\033[31mWelcome to the red color world"</span>
+    
+</pre>
 
 
 <h5>中文环境</h5>
