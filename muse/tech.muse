@@ -10,6 +10,8 @@
 
   2) [[https://github.com/foritudezhang/fortitude-home/blob/master/.emrc/emacs-rc-net.el][Emacs ange-ftp wrapper]]
 
+  3) [[./emacs-src-code.html][Emacs源码阅读笔记]]
+
  - Python
 
   1) [[http://norvig.com/python-lisp.html][Python for Lisp Programmers]]

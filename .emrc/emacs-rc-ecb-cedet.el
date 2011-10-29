@@ -67,8 +67,8 @@
 ;here comes ecb settings
 
 ;ecb layout setting
-(setq ecb-layout-name "my-left-right")
-(setq  ecb-layout-window-sizes (quote (("my-left-right" (0.10964912280701754 . 0.4772727272727273) (0.10964912280701754 . 0.5) (0.15350877192982457 . 0.4772727272727273) (0.15350877192982457 . 0.25) (0.15350877192982457 . 0.25)))))
+;;(setq ecb-layout-name "my-left-right")
+;;(setq  ecb-layout-window-sizes (quote (("my-left-right" (0.10964912280701754 . 0.4772727272727273) (0.10964912280701754 . 0.5) (0.15350877192982457 . 0.4772727272727273) (0.15350877192982457 . 0.25) (0.15350877192982457 . 0.25)))))
 
 ;donnot automaticall include path to ecb,only the required by call ecb-add-source-path explicitely
 (setq ecb-add-path-for-not-matching-files nil)

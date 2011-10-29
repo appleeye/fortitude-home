@@ -1,0 +1,26 @@
+*** Emacs源码阅读笔记
+
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>以Emacs bzr版本库的版本106082为基线，使用sloccount统计其代码规模，Emacs的源码中各类型代码所占比例如下：
+
+  - lisp:       1040391 (79.03%)
+  - ansic:       253569 (19.26%)
+  - objc:         10401 (0.79%)
+  - sh:            8690 (0.66%)
+  - perl:          1340 (0.10%)
+  - cs:             770 (0.06%)
+  - cpp:            528 (0.04%)
+  - awk:            466 (0.04%)
+  - python:         331 (0.03%)
+  - java:            27 (0.00%)
+  - sed:              4 (0.00%)
+
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>因此可见，lisp代码在Emacs源码中占了很大的比例，除外如果阅读过Emacs Lisp Referrence Manual这篇文档的话，
+应当注意过Introduction一节开篇即谈到：Emacs的大部分功能是由一种叫做Emacs Lisp的编程语言写成，现在单从代码
+量看来，此话不假，至于如果有机会进一步阅读Emacs的源码时，就更加体会到这句话的意义，甚至创建Emacs的Frame的代
+码，都是由Emacs Lisp写成（当然，还需要由C写成的一些builtin函数支撑）。
+
+**** C代码
+
+
+**** Emacs Lisp代码
+

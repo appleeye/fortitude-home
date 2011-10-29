@@ -5,6 +5,15 @@
     由于工作的原因，经常需要使用到find和xargs这两个命令，后来抽空在网上查阅了相关资料，find以及xargs等命令，由一个GNU findutils的包提供，
 该包的文档在GNU网站上已经提供，请访问[[http://www.gnu.org/software/findutils/manual/html_mono/find.html][http://www.gnu.org/software/findutils/manual/html_mono/find.html]]查阅。
 
+    常用命令收集：
+
+    - 查找当前目录下包含"pattern"的目录，并将其移动至"/mnt/dest"目录下，这里的 -I XX表示在xargs的初始命令中用xargs的输入替换XX。
+
+      <src type="shell">
+      find . -name "pattern*" -type d | xargs -I XX mv XX /mnt/dest
+      </src>
+
+
  2） ANSI color（让你的SHELL脚本更加多彩）
 
     [[http://en.wikipedia.org/wiki/ANSI_color][维基百科上关于ANSI color的介绍]]

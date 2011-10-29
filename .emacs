@@ -2,43 +2,43 @@
 ;; This file will try to load all kinds specific extensions.
 
 ;; Load look and feel rc.
-(load "~/.emrc/emacs-rc-look-feel.el")
+(load "~/.emrc/emacs-rc-look-feel")
 
 ;; Load org-mode rc.
-(load "~/.emrc/emacs-rc-org.el")
+(load "~/.emrc/emacs-rc-org")
 
 ;; Load html rc.
-(load "~/.emrc/emacs-rc-html.el")
+(load "~/.emrc/emacs-rc-html")
 
 ;; Load mew rc
-(load "~/.emrc/emacs-rc-mew.el")
+(load "~/.emrc/emacs-rc-mew")
 
 ;; Load cedet-ecb rc.
-(load "~/.emrc/emacs-rc-ecb-cedet.el")
+(load "~/.emrc/emacs-rc-ecb-cedet")
 
 ;; load c rc.
-(load "~/.emrc/emacs-rc-c.el")
+(load "~/.emrc/emacs-rc-c")
 
 ;; Load java rc.
-(load "~/.emrc/emacs-rc-java.el")
+(load "~/.emrc/emacs-rc-java")
 
 ;; Load muse rc.
-(load "~/.emrc/emacs-rc-muse.el")
+(load "~/.emrc/emacs-rc-muse")
 
 ;; Load net rc.
-(load "~/.emrc/emacs-rc-net.el")
+(load "~/.emrc/emacs-rc-net")
 
 ;; Load tex rc.
-(load "~/.emrc/emacs-rc-tex.el")
+(load "~/.emrc/emacs-rc-tex")
 
 ;; Load python rc.
-(load "~/.emrc/emacs-rc-python.el")
+(load "~/.emrc/emacs-rc-python")
 
 ;; Load lisp rc.
-(load "~/.emrc/emacs-rc-lisp.el")
+(load "~/.emrc/emacs-rc-lisp")
 
 ;; Load misc rc.
-(load "~/.emrc/emacs-rc-misc.el")
+(load "~/.emrc/emacs-rc-misc")
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -46,7 +46,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(ecb-add-path-for-not-matching-files (quote (nil)) t)
-;; '(ecb-layout-window-sizes (quote (("my-left-right" (0.14912280701754385 . 0.4772727272727273) (0.14912280701754385 . 0.5) (0.14912280701754385 . 0.4772727272727273) (0.14912280701754385 . 0.25) (0.14912280701754385 . 0.25)))) t)
+ '(ecb-layout-window-sizes (quote (("my-left-right" (0.14912280701754385 . 0.4772727272727273) (0.14912280701754385 . 0.5) (0.14912280701754385 . 0.4772727272727273) (0.14912280701754385 . 0.25) (0.14912280701754385 . 0.25)))) t)
  '(ecb-options-version "2.40" t)
  '(ecb-source-path (quote ((#("/home/fortitude/org" 0 19 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu")) #("/home/fortitude/org" 0 19 (help-echo "Mouse-2 toggles maximizing, mouse-3 displays a popup-menu"))) ("/mnt/work/006-reddit/reddit-git" "reddit-code") ("/mnt/work/007-pylons/mypylonssite/zhamiao" "zhamiao") ("/mnt/work/001-android" "android") ("/mnt/work/007-pylons/wurdig/wurdig" "wurdig-pylons"))))
  '(org-agenda-files (quote ("~/org/201110M.org")))
