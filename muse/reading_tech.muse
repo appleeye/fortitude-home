@@ -2,4 +2,4 @@
 
 ** 国外
 
- [[http://www.amazon.com/Hackers-Painters-ebook/dp/B0026OR2NQ/ref=sr_1_2?ie=UTF8&qid=1318666000&sr=8-2][黑客与画家-Kindle版]]
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>[[http://www.amazon.com/Hackers-Painters-ebook/dp/B0026OR2NQ/ref=sr_1_2?ie=UTF8&qid=1318666000&sr=8-2][黑客与画家-Kindle版]]

@@ -72,3 +72,14 @@
 	;; (:base "blog-rss"
 	;;        :base-url "http://www.example.com/blog/"
 	;;        :path "/home/fortitude/muse/public_html/blog")))
+
+;; Hook to allow yas minor mode to work properly.
+(add-hook 'muse-mode-hook
+          (let ((original-command (lookup-key muse-mode-map [tab])))
+            `(lambda ()
+               (setq yas/fallback-behavior
+                     ;; , Here means original-command is not a constan
+                     ;; and need to be evaluated,then we got right apply
+                     ;; form.
+                     '(apply ,original-command))
+               (local-set-key [tab] 'yas/expand))))

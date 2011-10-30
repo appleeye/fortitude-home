@@ -1,8 +1,8 @@
 * 20110910-22:50:00 准备切换blog系统为muse-blog
 
-  晚上抽时间分析了一下muse-blog([[http://julien.danjou.info/muse-blog.html][http://julien.danjou.info/muse-blog.html]])的实现，并在emacs上成功配置了它。
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>晚上抽时间分析了一下muse-blog([[http://julien.danjou.info/muse-blog.html][http://julien.danjou.info/muse-blog.html]])的实现，并在emacs上成功配置了它。
 
-  为了后续更方便的发布blog，并和我的个人主站融合，我准备将WP上的重要博文逐渐切换至主站上，这项目工作预期会花上一两
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>为了后续更方便的发布blog，并和我的个人主站融合，我准备将WP上的重要博文逐渐切换至主站上，这项目工作预期会花上一两
 天的时间，适逢中秋节，我想我会很快完成。[1]
 
 Footnotes: 

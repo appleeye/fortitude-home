@@ -1,11 +1,11 @@
 **** 系统基础
  
- 1） GNU findutils
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>1）GNU findutils
 
-    由于工作的原因，经常需要使用到find和xargs这两个命令，后来抽空在网上查阅了相关资料，find以及xargs等命令，由一个GNU findutils的包提供，
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>由于工作的原因，经常需要使用到find和xargs这两个命令，后来抽空在网上查阅了相关资料，find以及xargs等命令，由一个GNU findutils的包提供，
 该包的文档在GNU网站上已经提供，请访问[[http://www.gnu.org/software/findutils/manual/html_mono/find.html][http://www.gnu.org/software/findutils/manual/html_mono/find.html]]查阅。
 
-    常用命令收集：
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>常用命令收集：
 
     - 查找当前目录下包含"pattern"的目录，并将其移动至"/mnt/dest"目录下，这里的 -I XX表示在xargs的初始命令中用xargs的输入替换XX。
 
@@ -14,11 +14,11 @@
       </src>
 
 
- 2） ANSI color（让你的SHELL脚本更加多彩）
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>2）ANSI color（让你的SHELL脚本更加多彩）
 
-    [[http://en.wikipedia.org/wiki/ANSI_color][维基百科上关于ANSI color的介绍]]
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>[[http://en.wikipedia.org/wiki/ANSI_color][维基百科上关于ANSI color的介绍]]
 
-    借助于上面介绍的内容，可供你写出诸如如下这样多彩的shell脚本：
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>借助于上面介绍的内容，可供你写出诸如如下这样多彩的shell脚本：
 
     <src type="shell">
     # This will output the text in blue color.
@@ -30,20 +30,20 @@
 
 **** 中文环境
  
- 1) Jave 中文
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>1） Jave 中文
     
-    在 *jre-path/lib/fonts/* 中建立一个 *fallback* 目录，拷贝中文字体如wqy-microhei过去，即可解决jre中文显示问题。   
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>在 *jre-path/lib/fonts/* 中建立一个 *fallback* 目录，拷贝中文字体如wqy-microhei过去，即可解决jre中文显示问题。   
 
- 2) Linux排版（Tex、LaTex、XeTex）
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>2）Linux排版（Tex、LaTex、XeTex）
 
-    [[http://liyanrui.is-programmer.com/2009/10/21/not-just-for-chinese.12264.html][不仅仅是为了中文---一篇关于中文排版的好文]]
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>[[http://liyanrui.is-programmer.com/2009/10/21/not-just-for-chinese.12264.html][不仅仅是为了中文---一篇关于中文排版的好文]]
 
 **** Gentoo
 
- 1) Gentoo OpenRC迁移指导
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>1）Gentoo OpenRC迁移指导
    
-    最近偶然间读到Gentoo OpenRC的迁移指导，OpenRC用来取代Gentoo原有的以bash-shell编写的RC系统，并从baselayout1中剥离出来，和baselayout2成为独立的两个包，改用C写成，从而更方便的实现系统调用，以便支持更多的平台，如Gentoo/FreeBSD、Gentoo Embedded。
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>最近偶然间读到Gentoo OpenRC的迁移指导，OpenRC用来取代Gentoo原有的以bash-shell编写的RC系统，并从baselayout1中剥离出来，和baselayout2成为独立的两个包，改用C写成，从而更方便的实现系统调用，以便支持更多的平台，如Gentoo/FreeBSD、Gentoo Embedded。
 
-    其链接为：[[http://www.gentoo.org/doc/en/openrc-migration.xml][http://www.gentoo.org/doc/en/openrc-migration.xml]]    
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>其链接为：[[http://www.gentoo.org/doc/en/openrc-migration.xml][http://www.gentoo.org/doc/en/openrc-migration.xml]]    
 
 **** VCS

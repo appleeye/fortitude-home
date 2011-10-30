@@ -58,7 +58,7 @@
 
 *** 其他
 
-  网络上有朋友整理了Emacs常用的命令列表，可以参考这个链接[2]。
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>网络上有朋友整理了Emacs常用的命令列表，可以参考这个链接[2]。
 
 Footnotes: 
 

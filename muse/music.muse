@@ -15,7 +15,7 @@
  - Elizium
 
 2. 民谣
- to be discovered...
+<literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>to be discovered...
 
 3. NewAge
  - Yanni
@@ -32,15 +32,14 @@
 *** 音乐学习
 
 1. Music On Linux
- - qjackctl、qsyntch、vmpk
+
+  - qjackctl、qsyntch、vmpk
 
    我利用这些工具在Linux上练习谈曲子，比如上面的正义柔情永在，用synth模拟笛子（flute）弹来相当不错，竟然让我莫名潸然。
 
    也许以后我应当时间写篇如何安装这些东东，下面暂给出启动脚本（startvmpk.sh）：
-
-    <src type="shell">
+<src type="shell">
     qjackctl &
     qsynth &
     vmpk
-    </src>
-
+</src>
