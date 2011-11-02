@@ -34,7 +34,7 @@
 
  - add-space-in-lines-begin-for-region (为region的每一行添加空格，20110909，为了自己编码方便，我写了这个函数)
 
-       <src type="emacs-lisp">
+       <src lang="emacs-lisp">
     (defun add-space-in-line-begin-for-region(col)
       "Add space in line begin for region.
     Usage:C-u number-of-space-you-want-to M-x add-space-in-lines-begin-for-region.

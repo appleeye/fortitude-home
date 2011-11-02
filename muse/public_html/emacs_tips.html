@@ -85,19 +85,19 @@
 </center> 
 
 <pre class="src">
-    (defun add-space-in-line-begin-for-region(col)
+    (<span style="color: #00ffff;">defun</span> <span style="color: #87cefa;">add-space-in-line-begin-for-region</span>(col)
       <span style="color: #ffa07a;">"Add space in line begin for region.
     Usage:C-u number-of-space-you-want-to M-x add-space-in-lines-begin-for-region.
     Of course,you can bind this function to a command such as C-x s,then you can
     type C-u 2 C-x s to insert spaces."</span>
       (interactive <span style="color: #ffa07a;">"P"</span>)
-      (let* ((rb (region-beginning))
+      (<span style="color: #00ffff;">let*</span> ((rb (region-beginning))
          (re (region-end))
          (lines (count-lines rb re)))
         (goto-char rb)
         (setq col (prefix-numeric-value col))
         (forward-line 0)
-        (while (&gt; lines 0)
+        (<span style="color: #00ffff;">while</span> (&gt; lines 0)
           (beginning-of-line)
           (insert (make-string col ?\s))
           (forward-line)

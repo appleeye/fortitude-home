@@ -52,7 +52,7 @@
   (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle))
 (add-hook 'c-mode-common-hook 'alexott/cedet-hook)
 (add-hook 'emacs-lisp-mode-hook 'alexott/cedet-hook)
-(add-hook 'python-mode-hook 'alexott/cedet-hook)
+;;(add-hook 'python-mode-hook 'alexott/cedet-hook)
 
 (defun alexott/gen-mode-cedet-hook ()
   ;(local-set-key "." 'semantic-complete-self-insert)
@@ -62,7 +62,7 @@
   (local-set-key "\C-cr" 'semantic-symref))
 (add-hook 'c-mode-common-hook 'alexott/gen-mode-cedet-hook)
 (add-hook 'emacs-lisp-mode-hook 'alexott/gen-mode-cedet-hook)
-(add-hook 'python-mode-hook 'alexott/gen-mode-cedet-hook)
+;;(add-hook 'python-mode-hook 'alexott/gen-mode-cedet-hook)
 
 ;here comes ecb settings
 

@@ -9,9 +9,9 @@
 
     - 查找当前目录下包含"pattern"的目录，并将其移动至"/mnt/dest"目录下，这里的 -I XX表示在xargs的初始命令中用xargs的输入替换XX。
 
-      <src type="shell">
+<src lang="shell-script">
       find . -name "pattern*" -type d | xargs -I XX mv XX /mnt/dest
-      </src>
+</src>
 
 
 <literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>2）ANSI color（让你的SHELL脚本更加多彩）
@@ -20,13 +20,13 @@
 
 <literal>&nbsp;&nbsp;&nbsp;&nbsp;</literal>借助于上面介绍的内容，可供你写出诸如如下这样多彩的shell脚本：
 
-    <src type="shell">
+<src lang="shell-script">
     # This will output the text in blue color.
     echo -e "\033[34mWelcome to the blue color wolrd"
 
     # This will output the text in red color.
     echo -e "\033[31mWelcome to the red color world"
-    </src>
+</src>
 
 **** 中文环境
  

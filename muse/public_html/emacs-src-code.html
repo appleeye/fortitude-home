@@ -36,7 +36,7 @@
                     <div class="yui-b"> 
                         <!-- start: stack grids here --> 
     <!-- Page published by Emacs Muse begins here --> 
-<h4>Emacs源码阅读笔记</h4>
+<h3>Emacs源码阅读笔记</h3>
 
 <p class="first">&nbsp;&nbsp;&nbsp;&nbsp;以Emacs bzr版本库的版本106082为基线，使用sloccount统计其代码规模，Emacs的源码中各类型代码所占比例如下：</p>
 
@@ -59,11 +59,88 @@
 量看来，此话不假，至于如果有机会进一步阅读Emacs的源码时，就更加体会到这句话的意义，甚至创建Emacs的Frame的代
 码，都是由Emacs Lisp写成（当然，还需要由C写成的一些builtin函数支撑）。</p>
 
-<h5>C代码</h5>
+<hr>
+
+<h4>C代码</h4>
+
+<h5><em>编译与调试</em></h5>
+
+
+<h5><em>main函数</em></h5>
+
+
+<h5><em>builtin函数</em></h5>
+
+<ul>
+<li><em>DEFUN宏</em>
+
+<p>DEFUN用于在emacs的C源文件中定义一个builtin函数，定义之后，可以在syms_of_xxx(xxx是文件名)中通过defsubr安装
+这个builtin函数，当然，在大多数情况下，我们实际上不需要增加builtin函数，除非Elisp不易实现期望的功能。</p>
+
+<p>以下是DEFUN的定义以及使用DEFUN定义的一个核心函数：</p></li>
+</ul>
+
+<pre class="src">
+<span style="color: #ff7f24;">/* </span><span style="color: #ff7f24;">This version of DEFUN declares a function prototype with the right
+   arguments, so we can catch errors with maxargs at compile-time.  </span><span style="color: #ff7f24;">*/</span>
+<span style="color: #b0c4de;">#define</span> <span style="color: #87cefa;">DEFUN</span>(<span style="color: #eedd82;">lname</span>, <span style="color: #eedd82;">fnname</span>, <span style="color: #eedd82;">sname</span>, <span style="color: #eedd82;">minargs</span>, <span style="color: #eedd82;">maxargs</span>, <span style="color: #eedd82;">intspec</span>, <span style="color: #eedd82;">doc</span>) \
+  Lisp_Object <span style="color: #98fb98;">fnname</span> <span style="color: #eedd82;">DEFUN_ARGS_</span> ## maxargs ;       \
+  <span style="color: #00ffff;">static</span> <span style="color: #87cefa;">DECL_ALIGN</span> (<span style="color: #00ffff;">struct</span> <span style="color: #98fb98;">Lisp_Subr</span>, sname) =       \
+    { PVEC_SUBR,              \
+      { .a ## maxargs = fnname },       \
+      minargs, maxargs, lname, intspec, 0};       \
+  <span style="color: #98fb98;">Lisp_Object</span> <span style="color: #eedd82;">fnname</span>
+  
+</pre>
+<br>
+
+<pre class="src">
+DEFUN (<span style="color: #ffa07a;">"recursive-edit"</span>, Frecursive_edit, Srecursive_edit, 0, 0, <span style="color: #ffa07a;">""</span>,
+       doc: /* Invoke the editor command loop recursively.
+To get out of the recursive edit, a command can do `(throw <span style="color: #ffa07a;">'exit nil)'</span>;
+that tells this function to <span style="color: #00ffff;">return</span>.
+Alternatively, `(throw <span style="color: #ffa07a;">'exit t)'</span> makes this function signal an error.
+This function <span style="color: #00ffff;">is</span> called by the editor initialization to begin editing.  */)
+  (void)
+{
+  <span style="color: #b0c4de;">int</span> count = SPECPDL_INDEX ();
+  /* &#20854;&#20182;&#20195;&#30721;&#24573;&#30053;... */
+}
+  
+</pre>
+
+
+<h5>eval处理</h5>
+
+
+<h5>输入处理</h5>
+
+
+<h5>字节码处理</h5>
+
+
+<h5>X/Gtk处理</h5>
+
+
+<h5>中文化处理</h5>
+
+<hr>
 
 
 
-<h5>Emacs Lisp代码</h5>
+<h4>Emacs Lisp代码</h4>
+
+<h5>启动过程</h5>
+
+<p>loadup.el
+startup.el(top_level form定义)</p>
+
+
+<h5>Fontify处理</h5>
+
+
+<h5>各类Hook</h5>
+
 
 
 
